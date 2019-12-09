@@ -1,0 +1,179 @@
+\documentclass[a4paper]{article}
+    \usepackage{amsmath}
+    \usepackage{amssymb}
+    \usepackage{textcomp}
+    \usepackage[utf8]{inputenc}
+    \usepackage[T1]{fontenc}
+    \textheight=10in
+    \pagestyle{empty}
+    \raggedright
+    % Added packages
+    \usepackage{hyperref}
+    \usepackage[T1]{fontenc}
+    \usepackage[utf8]{inputenc}
+    \usepackage[dvipsnames]{xcolor}
+
+    % Prettifying my resume
+    \usepackage{geometry}
+    \geometry{margin=1in, headsep=.4in}
+    \usepackage{cmbright}
+    \renewcommand{\familydefault}{\sfdefault}
+    \usepackage{fancyhdr}
+    \pagestyle{fancy}
+    \fancyhf{}
+    \renewcommand{\headrulewidth}{2pt}% 2pt header rule
+    \renewcommand{\headrule}{\hbox to\headwidth{\color{Apricot}\leaders\hrule height \headrulewidth\hfill}}
+    \lhead{\rule[-2ex]{0pt}{2ex}	{\color{RubineRed} {\Huge {\fontseries{sb}\selectfont{Your Name}}}}}
+    \rhead{Address $\cdot$ E-mail $\cdot$ Cell\\
+	\href{Website}{Website} $\cdot$ \href{LinkedIn}{LinkedIn}}
+	\rfoot{Last Updated: $2^{\text{nd}}$ December, $2019$}
+	
+\def\bull{\vrule height 0.8ex width .7ex depth -.1ex }
+
+% DEFINITIONS FOR RESUME %%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\area} [2] {
+    \vspace*{-9pt}
+    \begin{verse}
+        \textbf{#1}   #2
+    \end{verse}
+}
+
+\newcommand{\lineunder} {
+    \vspace*{-8pt} \\
+    \hspace*{-18pt} \hrulefill \\
+}
+
+\newcommand{\header} [1] {
+    {\hspace*{-18pt}\vspace*{6pt} {\color{CarnationPink}\large{\textbf{#1}}}}\\
+}
+
+\newcommand{\employer} [3] {
+    { \textbf{#1} (#2)\\ \underline{\textbf{\emph{#3}}}\\  }
+}
+
+\newcommand{\contact} [3] {
+    \vspace*{-10pt}
+    \begin{center}
+        {\Huge \scshape {#1}}\\
+        #2 \\ #3
+    \end{center}
+    \vspace*{-8pt}
+}
+
+\newenvironment{achievements}{
+    \begin{list}
+        {$\bullet$}{\topsep 0pt \itemsep -2pt}}{\vspace*{4pt}
+    \end{list}
+}
+
+\newcommand{\schoolwithcourses} [4] {
+    \textbf{#1} #2 $\bullet$ #3\\
+    #4 \\
+    \vspace*{5pt}
+}
+
+\newcommand{\school} [4] {
+    \textbf{#1} #2 $\bullet$ #3\\
+    #4 \\
+}
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=cyan
+}
+% END RESUME DEFINITIONS %%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+
+%==== Profile ====%
+\header{Profile}
+Brief sentence describing career highlights 
+\vspace{2mm}
+
+%==== Education ====%
+\header{Education}
+\textbf{Degree 1},  \hfill Year\\
+Institution 1 \hfill Location\\
+Degree details 1\\
+Degree details 2\\
+\vspace{2mm}
+\textbf{Degree 2} \hfill Year\\
+Institution 2\hfill Location\\
+Degree details 1\\
+Degree details 2\\
+\vspace{2mm}
+
+%==== Technical Skills & Coursework ====%
+\header{Technical Skills}
+\hspace{-0.5em}\begin{tabular}{ l l }
+	Programming Languages: & Language 1, Language 2\\
+	Technologies: & Technology 1, Technology 2\\
+\end{tabular}
+\vspace{2mm}
+
+%==== Experience ====%
+\header{Work Experience}
+\vspace{1mm}
+\textbf{Company 1} \hfill Location 1\\
+\textit{Position 1} \hfill Year\\
+\vspace{-1mm}
+\begin{itemize} \itemsep -2pt
+    \item Brief description point 1
+    \item Brief description point 2
+\end{itemize}
+\vspace{1mm}
+\textbf{Company 2} \hfill Location 2\\
+\textit{Position 2} \hfill Year\\
+\vspace{-1mm}
+\begin{itemize} \itemsep -2pt
+    \item Brief description point 1
+    \item Brief description point 2
+\end{itemize}
+
+%==== Select Projects ====%
+\header{Projects}
+\vspace{1mm}
+\textbf{Project 1}\\
+\vspace{-1mm}
+\begin{itemize} \itemsep -2pt
+	\item Brief description point 1
+	\item Brief description point 2
+\end{itemize}
+\vspace{1mm}
+\textbf{Project 2}\\
+\vspace{-1mm}
+\begin{itemize} \itemsep -2pt
+	\item Brief description point 1
+	\item Brief description point 2
+\end{itemize}
+\vspace{1mm}
+
+%==== Publications ====%
+\header{Publications}
+\begin{enumerate} \itemsep -2pt
+    \item Publication 1
+    \item Publication 2
+\end{enumerate}
+\vspace*{2mm}
+
+%==== Awards ====%
+\header{Awards}
+\textbf{Award 1} \hfill Awarding Organisation 1\\
+Brief description \hfill Year\\
+\vspace*{2mm}
+\textbf{Award 2} \hfill Awarding Organisation 2\\
+Brief description \hfill Year\\
+\vspace*{2mm}
+
+%==== Leadership ====%
+\header{Leadership}
+\textbf{Position 1} \hfill Organisation 1\\
+Brief description \hfill Year\\
+\vspace*{2mm}
+\textbf{Position 2} \hfill Organisation 2\\
+Brief description \hfill Year\\
+\vspace*{2mm}
+ 
+%==== Hobbies & Interests ====%
+\header{Hobbies \& Interests}
+Hobby 1, Hobby 2, Hobby 3
+\end{document}
